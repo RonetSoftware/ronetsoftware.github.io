@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy · Ronet Software</title>
+  <meta name="description" content="How Ronet Software LLC handles personal information as a company, separate from how any individual product handles user data." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --paper:      #f5f5f7;
+      --surface:    #ffffff;
+      --ink:        #1d1d1f;
+      --ink-soft:   #6e6e73;
+      --ink-faint:  #a0a0a6;
+      --accent:     #0071e3;
+      --accent-deep:#0062c9;
+      --line:       rgba(0, 0, 0, 0.11);
+      --line-soft:  rgba(0, 0, 0, 0.055);
+      --grid:       rgba(0, 0, 0, 0.05);
+      --glow:       rgba(0, 113, 227, 0.07);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper:      #000000;
+        --surface:    #1c1c1e;
+        --ink:        #f5f5f7;
+        --ink-soft:   #a1a1a6;
+        --ink-faint:  #6c6c70;
+        --accent:     #2997ff;
+        --accent-deep:#47a9ff;
+        --line:       rgba(255, 255, 255, 0.13);
+        --line-soft:  rgba(255, 255, 255, 0.06);
+        --grid:       rgba(255, 255, 255, 0.045);
+        --glow:       rgba(41, 151, 255, 0.09);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% -5%, var(--glow) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Title bar (matches index.html) ---- */
+    .titlebar { border-bottom: 1px solid var(--line); }
+    .titlebar-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 16px 0;
+    }
+    .brandmark {
+      display: flex; align-items: center; gap: 11px;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800; font-size: 19px; letter-spacing: -0.02em;
+      text-decoration: none; color: var(--ink);
+    }
+    .brandmark .mark {
+      width: 26px; height: 26px;
+      border-radius: 7px;
+      background: var(--accent);
+      color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 800;
+    }
+    .brandmark span { color: var(--ink-faint); font-weight: 500; }
+    .back { color: var(--ink-faint); text-decoration: none; }
+    .back:hover { color: var(--accent); text-decoration: none; }
+
+    .head { padding: 64px 0 8px; }
+    .head .meta { color: var(--accent); margin-bottom: 18px; }
+    .head h1 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700; font-size: clamp(34px, 6vw, 54px);
+      letter-spacing: -0.03em; line-height: 1; margin-bottom: 16px;
+    }
+    .head .updated { color: var(--ink-faint); }
+
+    .tldr {
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      background: var(--surface);
+      padding: 22px 24px;
+      margin: 36px 0 8px;
+    }
+    .tldr p { font-size: 16px; color: var(--ink-soft); font-weight: 300; }
+    .tldr strong { color: var(--ink); font-weight: 600; }
+
+    section { padding: 40px 0 0; }
+    h2 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700; font-size: 22px; letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      display: flex; align-items: baseline; gap: 12px;
+    }
+    h2 .n { color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 500; }
+    p { color: var(--ink-soft); font-weight: 300; margin-bottom: 14px; max-width: 64ch; }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--ink); font-weight: 600; }
+    ul { list-style: none; margin: 0 0 14px; padding: 0; max-width: 64ch; }
+    li { color: var(--ink-soft); font-weight: 300; padding: 6px 0 6px 22px; position: relative; }
+    li::before {
+      content: ''; position: absolute; left: 0; top: 15px;
+      width: 7px; height: 1px; background: var(--accent);
+    }
+
+    /* ---- Footer (matches index.html) ---- */
+    footer {
+      margin-top: 72px;
+      border-top: 1px solid var(--ink);
+      padding: 22px 0 56px;
+    }
+    .block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+    }
+    .block div {
+      padding: 18px 20px 18px 0;
+      border-right: 1px solid var(--line-soft);
+    }
+    .block div:last-child { border-right: none; padding-right: 0; }
+    .block .k { color: var(--ink-faint); margin-bottom: 5px; }
+    .block .v { font-size: 14px; }
+    .block .v a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) {
+      .block { grid-template-columns: 1fr; }
+      .block div { border-right: none; }
+    }
+    .foot-base {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: var(--ink-faint);
+    }
+    .foot-base a { color: var(--accent); text-decoration: none; }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+</head>
+
+<body>
+
+  <div class="titlebar">
+    <div class="wrap titlebar-inner">
+      <a class="brandmark" href="index.html"><span class="mark">R</span>Ronet Software <span class="mono">Studio</span></a>
+      <a class="back mono" href="index.html">&larr; Back</a>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <div class="head">
+      <p class="meta mono">Privacy Policy</p>
+      <h1>How Ronet Software handles data.</h1>
+      <p class="updated mono">Last updated 30 June 2026</p>
+    </div>
+
+    <div class="tldr">
+      <p><strong>Short version:</strong> This policy covers Ronet Software LLC as a company: our business correspondence, vendors and contractors, and any future products or services we may publish, separate from any individual product's own user-facing privacy policy. If you're looking for how a specific app handles your data as a user, check that app's own privacy policy first; this page covers the company itself.</p>
+    </div>
+
+    <section>
+      <h2><span class="n">01</span> Who this policy covers</h2>
+      <p>Ronet Software LLC is a Wisconsin limited liability company ("Ronet Software," "we," "us," "our," or "the company"). This policy describes how we handle personal information in our capacity as a business, including correspondence sent to our business contacts, dealings with vendors and service providers, and personal information connected to the company's products generally.</p>
+      <p>Where a specific Ronet Software product, such as Extrudix, has its own privacy policy describing how that product handles user data, that product-specific policy governs your use of that product. This page is the company-level policy that sits above any individual product.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">02</span> Business correspondence</h2>
+      <p>If you contact us, by email, through a contact form, or through any other channel, we keep the message, your contact details, and our reply so we can respond to you and keep a record of the conversation. We use this information only to communicate with you and to operate our business, and we keep it for as long as needed to handle the matter and a reasonable period afterward.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">03</span> Vendors, contractors, and service providers</h2>
+      <p>In the course of running the company, we work with vendors and service providers such as payment processors, hosting and infrastructure providers, analytics providers, and professional advisors. Where any of these providers process personal information on our behalf, they do so under their own privacy policies and, where required, under a data processing agreement with us. We choose providers that offer appropriate safeguards for the personal information involved.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">04</span> Job applicants and business partners</h2>
+      <p>If you apply for a role with us, send a business proposal, or otherwise reach out as a prospective partner or contractor, we use the information you provide solely to evaluate and respond to that inquiry, and we keep it only as long as needed for that purpose unless you ask us to retain it for future opportunities.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">05</span> What we do not do</h2>
+      <p>We do not sell personal information, and we do not share it for cross-context behavioral advertising. We do not build advertising profiles, and we make no automated decisions about individuals based on the personal information described in this policy.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">06</span> International transfers</h2>
+      <p>Where personal information is processed by a service provider located outside your country, that provider relies on appropriate safeguards for the transfer, such as the EU-US Data Privacy Framework or Standard Contractual Clauses, where applicable. We ourselves operate from the United States.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">07</span> Your rights</h2>
+      <p>Depending on where you live, you may have rights to know what personal information we hold about you, to correct it, to delete it, to receive a copy of it, to object to or restrict certain processing, and to opt out of any sale or sharing, which we do not engage in. To exercise any of these rights, email <a href="mailto:support@ronetsoftware.com">support@ronetsoftware.com</a>. We will respond within the time the law allows, and we may need to verify your identity before acting on a request.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">08</span> Children</h2>
+      <p>This policy and our business dealings are not directed at children. We do not knowingly collect personal information from children through the channels described here.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">09</span> Changes to this policy</h2>
+      <p>If this policy changes, the updated version will be posted here with a new date at the top.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">10</span> Contact</h2>
+      <p>Questions about this policy can go to <a href="mailto:support@ronetsoftware.com">support@ronetsoftware.com</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="block">
+        <div><div class="k mono">Company</div><div class="v">Ronet Software LLC</div></div>
+        <div><div class="k mono">Based in</div><div class="v">Wisconsin, USA</div></div>
+        <div><div class="k mono">Contact</div><div class="v"><a href="mailto:support@ronetsoftware.com">support@ronetsoftware.com</a></div></div>
+      </div>
+      <div class="foot-base mono">
+        <span>&copy; 2026 Ronet Software LLC</span>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
